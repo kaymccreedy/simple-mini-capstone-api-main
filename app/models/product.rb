@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
 
   def tax
-    price * 0.09
+    (price * 0.09).round(2)
   end
 
   def total
